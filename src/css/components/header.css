@@ -1,0 +1,33 @@
+/* Header css */
+
+header {
+    background-color: var(--color-primary);
+    border-bottom: solid 10px var(--color-secondary);
+}
+
+header .logo-container {
+    display: block;
+    padding: 20px;
+}
+
+header .logo-container .logo {
+    font-size: 2em;
+    color: #FFFFFF;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    display: inline;
+    list-style: none;
+    text-align: center
+}
+
+header ul li a {
+    display: inline-block;
+    min-width: 120px;
+}

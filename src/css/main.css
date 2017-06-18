@@ -1,0 +1,26 @@
+/*
+ * Future web main css file
+ * ========================
+ *
+ * This file is used only to import the css files.
+ *
+ * **IMPORTANT**
+ * No CSS styles should be written here at all.
+ * -------------------------------------------
+ *
+ *
+ * Table of Contents
+ * =================
+ *
+ * 1. Settings.................................................................
+ *      - colors
+ * 2. Components...............................................................
+ *      - header
+ */
+
+/* Settings */
+@import 'settings/colors.css';
+
+/* Components */
+@import 'components/header.css';
+
