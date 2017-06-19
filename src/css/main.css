@@ -14,13 +14,20 @@
  *
  * 1. Settings.................................................................
  *      - colors
+ * 2. Base.....................................................................
+ *      - body
  * 2. Components...............................................................
  *      - header
+ *      - footer
  */
 
 /* Settings */
 @import 'settings/colors.css';
 
+/* Settings */
+@import 'base/body.css';
+
 /* Components */
 @import 'components/header.css';
+@import 'components/footer.css';
 

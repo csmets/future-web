@@ -2,7 +2,9 @@
 
 header {
     background-color: var(--color-primary);
-    border-bottom: solid 10px var(--color-secondary);
+    border-bottom: solid 5px var(--color-secondary);
+    margin 0;
+    padding 0;
 }
 
 header .logo-container {
@@ -17,17 +19,28 @@ header .logo-container .logo {
 
 header ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 header ul li {
     display: inline;
     list-style: none;
-    text-align: center
+    text-align: center;
+    padding: 5px;
+}
+
+header ul li:hover {
+    background-color: var(--color-secondary);
 }
 
 header ul li a {
     display: inline-block;
     min-width: 120px;
+    color: var(--font-color-inverted);
+}
+
+header ul li a:hover {
+    color: var(--font-color-primary);
+    text-decoration: none;
 }
