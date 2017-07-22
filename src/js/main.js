@@ -4,5 +4,4 @@
  *
  * This file is only used to import and run modules
  */
-import { app } from './app.js';
-
+import app from './app.js';
