@@ -1,12 +1,5 @@
 import global from './metadata/global.js';
-
-const index = { template: '<div>index</div>' };
-const about = { template: '<div>about</div>' };
-
-const routes = [
-    { path: '/', component: index },
-    { path: '/about', component: about },
-];
+import routes from './routes.js';
 
 const router = new VueRouter({
     routes,
