@@ -22,12 +22,12 @@
  */
 
 /* Settings */
-@import 'settings/colors.css';
+@import "settings/colors.css";
 
 /* Settings */
-@import 'base/body.css';
+@import "base/body.css";
 
 /* Components */
-@import 'components/header.css';
-@import 'components/footer.css';
+@import "components/header.css";
+@import "components/footer.css";
 

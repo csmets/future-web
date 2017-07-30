@@ -17,12 +17,16 @@ To do list
     - [x]   ESlint
     - [WIP] CSS3
     - [WIP]   CSS3 Unit tests
-    - [x]   Stylelint
+    - [D]   Stylelint
     - [WIP] VueJS for SPA and Custom Components
     - [x]   Behaviour tests
     - [x]   Service workers
     - [x]   Continuous Integration
 
+[x] Haven't started
+[WIP] Work in Progress
+[D] Done
+[!] Issues / Road blocked
 
 Pet hates
 -----------------------------------------------

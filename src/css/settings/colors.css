@@ -1,11 +1,11 @@
 /* CSS Color variables */
 
 :root {
-    --color-primary: #3498db;
-    --color-secondary: #ecf0f1;
+    --color-primary: #3498DB;
+    --color-secondary: #ECF0F1;
 
-    --font-color-primary: #2c3e50;
-    --font-color-secondary: #34495e;
-    --font-color-highlight: #1abc9c;
-    --font-color-inverted: #ecf0f1;
+    --font-color-primary: #2C3E50;
+    --font-color-secondary: #34495E;
+    --font-color-highlight: #1ABC9C;
+    --font-color-inverted: #ECF0F1;
 }
