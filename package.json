@@ -1,11 +1,20 @@
 {
-    "name": "future-web",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "build": "bash scripts/build.sh"
-    },
-    "author": "Clyde Smets",
-    "license": "MIT"
+  "name": "future-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "test": "bash scripts/test.sh"
+  },
+  "author": "Clyde Smets",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "browserify-css": "^0.11.1",
+    "computed-style": "^0.3.0",
+    "hyperscript": "^2.0.2",
+    "tape": "^4.7.0",
+    "tape-css": "^1.0.2-beta"
+  }
 }
