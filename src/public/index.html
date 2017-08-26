@@ -47,18 +47,18 @@
             <router-view></router-view>
         </article>
 
-        <footer class="footer" role="contentinfo">
+        <footer role="contentinfo">
             <nav role="navigation">
                 <ul>
                     <li v-for="item in navigation">
-                        <router-link :to="item.path">
-                            {{ item.name }}
-                        </router-link>
+                        <router-link :to="item.path">{{ item.name }}</router-link>
                     </li>
                 </ul>
             </nav>
 
-            <small>Copyright &copy; <time datetime="2017">2017</time></small>
+            <div class="copy">
+                <small>Copyright &copy; <time datetime="2017">2017</time></small>
+            </div>
         </footer>
 
      </main>

@@ -1,11 +1,15 @@
 /* CSS Color variables */
 
 :root {
-    --color-primary: #3498DB;
+    --color-primary: #E67E22;
     --color-secondary: #ECF0F1;
+    --color-grey-dark: #7F8C8D;
 
     --font-color-primary: #2C3E50;
     --font-color-secondary: #34495E;
     --font-color-highlight: #1ABC9C;
     --font-color-inverted: #ECF0F1;
+
+    --link-color-primary: var(--color-primary);
+    --link-color-highlight: #D35400;
 }

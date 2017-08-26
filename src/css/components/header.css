@@ -4,7 +4,7 @@ header {
     display: grid;
     top: 0;
     margin: 0;
-    border-bottom: solid 2px var(--color-primary);
+    border-bottom: solid 1px var(--color-primary);
     padding: 0;
 }
 
@@ -19,20 +19,29 @@ header .logo-container .logo {
     padding: 8px;
     width: 35px;
     height: 35px;
+    fill: var(--color-grey-dark);
 }
 
 header .search-bar-container {
     grid-column-start: 2;
     grid-column-end: 4;
     align-self: center;
+    text-align: center;
 }
 
 .search-bar-container .search-bar {
-    width: 100%;
-    border-radius: 8px;
-    padding: 8px;
     border: none;
+    border-radius: 16px;
     background-color: var(--color-secondary);
+    padding: 8px;
+    width: 250px;
+    transition: width 0.3s;
+    text-align: center;
+}
+
+.search-bar-container .search-bar:focus {
+    width: 100%;
+    transition: width 0.6s;
 }
 
 header .extras-container {
