@@ -16,6 +16,7 @@
  *      - colors
  * 2. Base.....................................................................
  *      - body
+ *      - main
  * 2. Components...............................................................
  *      - header
  *      - footer
@@ -24,10 +25,10 @@
 /* Settings */
 @import "settings/colors.css";
 
-/* Settings */
+/* Base */
 @import "base/body.css";
+@import "base/main.css";
 
 /* Components */
 @import "components/header.css";
 @import "components/footer.css";
-

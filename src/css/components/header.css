@@ -1,47 +1,41 @@
 /* Header css */
 
 header {
+    display: grid;
     top: 0;
     margin: 0;
-    border-bottom: solid 5px var(--color-secondary);
-    background-color: var(--color-primary);
+    border-bottom: solid 2px var(--color-primary);
     padding: 0;
 }
 
 header .logo-container {
-    display: block;
-    padding: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 51px;
 }
 
 header .logo-container .logo {
-    font-size: 2em;
-    color: #FFFFFF;
+    position: absolute;
+    padding: 8px;
+    width: 35px;
+    height: 35px;
 }
 
-header ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+header .search-bar-container {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    align-self: center;
 }
 
-header ul li {
-    display: inline;
-    padding: 5px;
-    list-style: none;
-    text-align: center;
-}
-
-header ul li:hover {
+.search-bar-container .search-bar {
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    border: none;
     background-color: var(--color-secondary);
 }
 
-header ul li a {
-    display: inline-block;
-    min-width: 120px;
-    color: var(--font-color-inverted);
-}
-
-header ul li a:hover {
-    text-decoration: none;
-    color: var(--font-color-primary);
+header .extras-container {
+    grid-column-start: 4;
+    grid-column-end: 5;
 }
