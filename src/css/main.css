@@ -20,6 +20,7 @@
  * 2. Components...............................................................
  *      - header
  *      - footer
+ *      - reddit post
  */
 
 /* Settings */
@@ -32,3 +33,4 @@
 /* Components */
 @import "components/header.css";
 @import "components/footer.css";
+@import "components/reddit-post.css";

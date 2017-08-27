@@ -1,0 +1,25 @@
+.post {
+    display: flex;
+    margin: 10px 0;
+}
+
+.post .score {
+    order: 1;
+    font-weight: bold;
+    padding: 20px;
+    align-self: center;
+    width: 50px;
+}
+
+.post .thumbnail {
+    order: 2;
+    width: 100px;
+    height: auto;
+}
+
+.post .post-content {
+    order: 3;
+    flex-grow: 4;
+    align-self: center;
+    padding: 20px;
+}

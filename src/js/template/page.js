@@ -1,5 +1,5 @@
 /*
- * Home template
+ * Standard page template
  */
 
 const page = `
