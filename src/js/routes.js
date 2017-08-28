@@ -35,19 +35,22 @@ const home = {
                     console.log(entries);
                     entries.forEach((entry) => {
                         const post = {
-                            title: entry.data.title,
+                            author: entry.data.author,
                             domain: entry.data.domain,
-                            permalink: `https://www.reddit.com${entry.data.permalink}`,
-                            thumbnail: entry.data.thumbnail,
-                            thumbnail_height: entry.data.thumbnail_height,
-                            thumbnail_width: entry.data.thumbnail_width,
-                            ups: entry.data.ups,
                             downs: entry.data.downs,
-                            score: entry.data.score,
                             over_18: entry.data.over_18,
+                            score: entry.data.score,
+                            thumbnail: entry.data.thumbnail,
+                            title: entry.data.title,
+                            permalink: `https://www.reddit.com${entry.data.permalink}`,
+                            post_hint: entry.data.post_hint,
+                            ups: entry.data.ups,
                         };
                         this.posts.push(post);
                     });
+
+                    // Remove reddit sticky post
+                    this.posts.shift();
             });
         }
     },

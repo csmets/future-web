@@ -1,3 +1,13 @@
+.post-link {
+    text-decoration: none;
+    color: var(--font-color-primary);
+}
+
+.post:hover {
+    border-radius: 5px;
+    background-color: var(--color-highlight);
+}
+
 .post {
     display: flex;
     margin: 10px 0;
@@ -5,16 +15,17 @@
 
 .post .score {
     order: 1;
-    font-weight: bold;
-    padding: 20px;
     align-self: center;
+    padding: 20px;
     width: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 .post .thumbnail {
     order: 2;
-    width: 100px;
-    height: auto;
+    align-self: center;
+    width: 50px;
 }
 
 .post .post-content {
@@ -22,4 +33,41 @@
     flex-grow: 4;
     align-self: center;
     padding: 20px;
+}
+
+.post .post-content h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.post .post-content h1 {
+    font-size: 1rem;
+}
+
+.post .post-content h2 {
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: var(--font-color-secondary);
+}
+
+.post .post-content h3 {
+    font-size: 0.7rem;
+}
+
+.post .post-category {
+    order: 4;
+    flex-grow: 1;
+    align-self: center;
+    padding: 20px;
+    text-align: right;
+}
+
+.post .post-category .filter {
+    border: solid 1px var(--color-grey-dark);
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    color: var(--font-color-secondary);
 }

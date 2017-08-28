@@ -40,15 +40,23 @@ Vue.component('reddit-post', {
         'score',
         'thumbnail',
         'link',
+        'domain',
+        'author',
+        'hint',
     ],
     template: `
-<div class="post">
+<a class="post-link" v-bind:href="link">
+<article class="post">
     <div class="score">{{ score }}</div>
     <img class="thumbnail" v-bind:src="thumbnail" alt="">
     <div class="post-content">
-        <a class="title" v-bind:href="link">{{ title }}</a>
+        <h1>{{ title }}</h1>
+        <h2>{{ domain }}</h2>
+        <h3>posted by {{ author }}</h3>
     </div>
-</div>`,
+    <div class="post-category"><span class="filter">{{ hint }}</span></div>
+</article>
+</a>`,
 
 });
 
@@ -61,6 +69,9 @@ const homepage = `
         :score="post.score"
         :thumbnail="post.thumbnail"
         :link="post.permalink"
+        :domain="post.domain"
+        :author="post.author"
+        :hint="post.post_hint"
     ></reddit-post>
 </div>
 </div>`;
