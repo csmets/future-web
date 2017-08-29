@@ -1,6 +1,50 @@
 import homeMeta from '../../metadata/page/home.js';
 import homeTemplate from '../../template/home.js';
 
+const status = (response) => {
+    if (response.status >= 200 && response.status < 300) {
+        return Promise.resolve(response);
+    } else {
+        return Promise.reject(new Error(response.statusText));
+    }
+};
+
+const json = (response) => {
+    return response.json();
+};
+
+const posts = (json) => {
+    const entries = json.data.children;
+    let posts = [];
+
+    entries.forEach((entry) => {
+
+        let thumbnail = entry.data.thumbnail;
+
+        if (entry.data.over_18 === true)
+            thumbnail = '/images/over18.png';
+
+        const post = {
+            author: entry.data.author,
+            domain: entry.data.domain,
+            downs: entry.data.downs,
+            over_18: entry.data.over_18,
+            score: entry.data.score,
+            thumbnail: thumbnail,
+            title: entry.data.title,
+            permalink: `https://www.reddit.com${entry.data.permalink}`,
+            post_hint: entry.data.post_hint,
+            ups: entry.data.ups,
+        };
+        posts.push(post);
+    });
+
+    // Remove reddit sticky post
+    posts.shift();
+
+    return posts;
+};
+
 const home = {
     template: homeTemplate,
     data: () => homeMeta,
@@ -9,52 +53,12 @@ const home = {
     },
     methods: {
         loadReddit: function() {
-
-            function status(response) {
-                console.log(response.status);
-                if (response.status >= 200 && response.status < 300) {
-                    return Promise.resolve(response);
-                } else {
-                    return Promise.reject(new Error(response.statusText));
-                }
-            }
-
-            function json(response) {
-                return response.json();
-            }
-
             fetch('https://www.reddit.com/r/funny.json')
                 .then(status)
                 .then(json)
-                .then((data) => {
-                    const entries = data.data.children;
-                    console.log(entries);
-                    entries.forEach((entry) => {
-
-                        let thumbnail = entry.data.thumbnail;
-
-                        if (entry.data.over_18 === true)
-                            thumbnail = '/images/over18.png';
-
-                        const post = {
-                            author: entry.data.author,
-                            domain: entry.data.domain,
-                            downs: entry.data.downs,
-                            over_18: entry.data.over_18,
-                            score: entry.data.score,
-                            thumbnail: thumbnail,
-                            title: entry.data.title,
-                            permalink: `https://www.reddit.com${entry.data.permalink}`,
-                            post_hint: entry.data.post_hint,
-                            ups: entry.data.ups,
-                        };
-                        this.posts.push(post);
-                    });
-
-                    // Remove reddit sticky post
-                    this.posts.shift();
-            });
-        }
+                .then(posts)
+                .then((data) => this.posts = data);
+        },
     },
 };
 
