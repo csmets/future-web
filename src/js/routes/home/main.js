@@ -1,9 +1,5 @@
-import pageTemplate from './template/page.js';
-import homeMeta from './metadata/page/home.js';
-import homeTemplate from './template/home.js';
-import aboutMeta from './metadata/page/about.js';
-
-const routes = [];
+import homeMeta from '../../metadata/page/home.js';
+import homeTemplate from '../../template/home.js';
 
 const home = {
     template: homeTemplate,
@@ -34,13 +30,19 @@ const home = {
                     const entries = data.data.children;
                     console.log(entries);
                     entries.forEach((entry) => {
+
+                        let thumbnail = entry.data.thumbnail;
+
+                        if (entry.data.over_18 === true)
+                            thumbnail = '/images/over18.png';
+
                         const post = {
                             author: entry.data.author,
                             domain: entry.data.domain,
                             downs: entry.data.downs,
                             over_18: entry.data.over_18,
                             score: entry.data.score,
-                            thumbnail: entry.data.thumbnail,
+                            thumbnail: thumbnail,
                             title: entry.data.title,
                             permalink: `https://www.reddit.com${entry.data.permalink}`,
                             post_hint: entry.data.post_hint,
@@ -55,18 +57,5 @@ const home = {
         }
     },
 };
-routes.push({
-    path: '/',
-    component: home,
-});
 
-const about = {
-    template: pageTemplate,
-    data: () => aboutMeta,
-};
-routes.push({
-    path: '/about',
-    component: about,
-});
-
-export { routes as default };
+export { home as default };

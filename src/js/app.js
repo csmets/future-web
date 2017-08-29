@@ -1,5 +1,5 @@
 import global from './metadata/global.js';
-import routes from './routes.js';
+import routes from './routes/main.js';
 
 const router = new VueRouter({
     routes,
